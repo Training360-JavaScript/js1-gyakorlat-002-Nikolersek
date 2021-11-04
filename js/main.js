@@ -4,3 +4,8 @@
 - A függvény neve `generateList` legyen!
 - A HTML-template egy lista, amelynek a listaelemei a kapott tömb értékeit tartalmazzák.
 */
+'use strict'
+
+const generateList = (dataString) => {
+    return "<ul>" + dataString.map(item => "<li>" + item + "</li>").join() + "</ul>";
+};

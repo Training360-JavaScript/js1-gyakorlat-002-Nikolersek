@@ -15,3 +15,17 @@ hogy a tömb minden eleme number típusú-e vagy sem
 - `someElementsAreNumbers`: Értéke true/false attól függően, 
 hogy a tömbben van-e number típusú elem vagy sem
 */
+'use strict';
+
+//let checkerArray = [1, 2, 3, 4];
+//let checkerNumber = 3;
+
+const checker = (checkerArray, checkerNumber) => {
+    const checkerArrayIndexOf = checkerArray.indexOf(checkerNumber);
+    return {
+        exists: checkerArrayIndexOf > -1 ? true : false,
+        index: checkerArrayIndexOf,
+        allElementsAreNumbers: checkerArray.length == checkerArray.filter(item => !isNaN(item)).length ? true : false,
+        someElementsAreNumbers: checkerArray.filter(item => !isNaN(item)).length == 0 ? false : true,
+    }
+};
