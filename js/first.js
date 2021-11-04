@@ -4,3 +4,6 @@
 - A függvény szorozza meg a tömbelemek értékét 1.27-tel, majd pedig 
 __térjen vissza__ az elemek egész számra kerekített összegével!
 */
+'use strict';
+
+const brutto = (array) => Math.round(array.map(item => item * 1.27).reduce((previousItem, currentItem) => previousItem + currentItem));
